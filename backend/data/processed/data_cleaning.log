@@ -1,0 +1,169 @@
+2025-03-06 20:38:49,815 - INFO - Starting data cleaning pipeline...
+2025-03-06 20:38:49,815 - INFO - Loading datasets...
+2025-03-06 20:38:49,901 - INFO - 
+MOVIES Dataset:
+2025-03-06 20:38:49,901 - INFO - Shape: (9742, 3)
+2025-03-06 20:38:49,901 - INFO - Columns: ['movieId', 'title', 'genres']
+2025-03-06 20:38:49,902 - INFO - Data Types:
+movieId     int64
+title      object
+genres     object
+dtype: object
+2025-03-06 20:38:49,903 - INFO - Missing Values:
+movieId    0
+title      0
+genres     0
+dtype: int64
+2025-03-06 20:38:49,903 - INFO - 
+RATINGS Dataset:
+2025-03-06 20:38:49,904 - INFO - Shape: (100836, 4)
+2025-03-06 20:38:49,904 - INFO - Columns: ['userId', 'movieId', 'rating', 'timestamp']
+2025-03-06 20:38:49,904 - INFO - Data Types:
+userId         int64
+movieId        int64
+rating       float64
+timestamp      int64
+dtype: object
+2025-03-06 20:38:49,905 - INFO - Missing Values:
+userId       0
+movieId      0
+rating       0
+timestamp    0
+dtype: int64
+2025-03-06 20:38:49,905 - INFO - 
+TAGS Dataset:
+2025-03-06 20:38:49,905 - INFO - Shape: (3683, 4)
+2025-03-06 20:38:49,905 - INFO - Columns: ['userId', 'movieId', 'tag', 'timestamp']
+2025-03-06 20:38:49,906 - INFO - Data Types:
+userId        int64
+movieId       int64
+tag          object
+timestamp     int64
+dtype: object
+2025-03-06 20:38:49,907 - INFO - Missing Values:
+userId       0
+movieId      0
+tag          0
+timestamp    0
+dtype: int64
+2025-03-06 20:38:49,907 - INFO - 
+LINKS Dataset:
+2025-03-06 20:38:49,907 - INFO - Shape: (9742, 3)
+2025-03-06 20:38:49,907 - INFO - Columns: ['movieId', 'imdbId', 'tmdbId']
+2025-03-06 20:38:49,907 - INFO - Data Types:
+movieId      int64
+imdbId       int64
+tmdbId     float64
+dtype: object
+2025-03-06 20:38:49,909 - INFO - Missing Values:
+movieId    0
+imdbId     0
+tmdbId     8
+dtype: int64
+2025-03-06 20:38:49,909 - INFO - Handling missing values...
+2025-03-06 20:38:49,916 - INFO - Removing duplicates...
+2025-03-06 20:38:49,919 - INFO - Removed 0 duplicates from movies dataset
+2025-03-06 20:38:49,939 - INFO - Removed 0 duplicates from ratings dataset
+2025-03-06 20:38:49,943 - INFO - Removed 0 duplicates from tags dataset
+2025-03-06 20:38:49,945 - INFO - Removed 0 duplicates from links dataset
+2025-03-06 20:38:49,945 - INFO - Converting data types...
+2025-03-06 20:38:49,976 - INFO - Handling outliers...
+2025-03-06 20:38:49,985 - INFO - Standardizing and encoding features...
+2025-03-06 20:38:50,088 - INFO - Extracting features...
+2025-03-06 20:38:50,123 - INFO - Validating and saving cleaned datasets...
+2025-03-06 20:38:50,125 - INFO - Missing values in movies dataset: 3513
+2025-03-06 20:38:50,224 - INFO - Saved cleaned movies dataset to ../processed/cleaned_movies.csv
+2025-03-06 20:38:50,228 - INFO - Missing values in ratings dataset: 0
+2025-03-06 20:38:50,837 - INFO - Saved cleaned ratings dataset to ../processed/cleaned_ratings.csv
+2025-03-06 20:38:50,838 - INFO - Missing values in tags dataset: 0
+2025-03-06 20:38:50,855 - INFO - Saved cleaned tags dataset to ../processed/cleaned_tags.csv
+2025-03-06 20:38:50,855 - INFO - Missing values in links dataset: 0
+2025-03-06 20:38:50,870 - INFO - Saved cleaned links dataset to ../processed/cleaned_links.csv
+2025-03-06 20:38:50,870 - INFO - Data cleaning pipeline completed successfully!
+2025-03-06 20:40:32,364 - INFO - Starting data cleaning pipeline...
+2025-03-06 20:40:32,364 - INFO - Loading datasets...
+2025-03-06 20:40:32,442 - INFO - 
+MOVIES Dataset:
+2025-03-06 20:40:32,442 - INFO - Shape: (9742, 3)
+2025-03-06 20:40:32,442 - INFO - Columns: ['movieId', 'title', 'genres']
+2025-03-06 20:40:32,443 - INFO - Data Types:
+movieId     int64
+title      object
+genres     object
+dtype: object
+2025-03-06 20:40:32,446 - INFO - Missing Values:
+movieId    0
+title      0
+genres     0
+dtype: int64
+2025-03-06 20:40:32,446 - INFO - 
+RATINGS Dataset:
+2025-03-06 20:40:32,446 - INFO - Shape: (100836, 4)
+2025-03-06 20:40:32,446 - INFO - Columns: ['userId', 'movieId', 'rating', 'timestamp']
+2025-03-06 20:40:32,447 - INFO - Data Types:
+userId         int64
+movieId        int64
+rating       float64
+timestamp      int64
+dtype: object
+2025-03-06 20:40:32,448 - INFO - Missing Values:
+userId       0
+movieId      0
+rating       0
+timestamp    0
+dtype: int64
+2025-03-06 20:40:32,449 - INFO - 
+TAGS Dataset:
+2025-03-06 20:40:32,449 - INFO - Shape: (3683, 4)
+2025-03-06 20:40:32,449 - INFO - Columns: ['userId', 'movieId', 'tag', 'timestamp']
+2025-03-06 20:40:32,449 - INFO - Data Types:
+userId        int64
+movieId       int64
+tag          object
+timestamp     int64
+dtype: object
+2025-03-06 20:40:32,450 - INFO - Missing Values:
+userId       0
+movieId      0
+tag          0
+timestamp    0
+dtype: int64
+2025-03-06 20:40:32,450 - INFO - 
+LINKS Dataset:
+2025-03-06 20:40:32,450 - INFO - Shape: (9742, 3)
+2025-03-06 20:40:32,450 - INFO - Columns: ['movieId', 'imdbId', 'tmdbId']
+2025-03-06 20:40:32,450 - INFO - Data Types:
+movieId      int64
+imdbId       int64
+tmdbId     float64
+dtype: object
+2025-03-06 20:40:32,451 - INFO - Missing Values:
+movieId    0
+imdbId     0
+tmdbId     8
+dtype: int64
+2025-03-06 20:40:32,451 - INFO - Handling missing values...
+2025-03-06 20:40:32,457 - INFO - Removing duplicates...
+2025-03-06 20:40:32,462 - INFO - Removed 0 duplicates from movies dataset
+2025-03-06 20:40:32,484 - INFO - Removed 0 duplicates from ratings dataset
+2025-03-06 20:40:32,487 - INFO - Removed 0 duplicates from tags dataset
+2025-03-06 20:40:32,489 - INFO - Removed 0 duplicates from links dataset
+2025-03-06 20:40:32,489 - INFO - Converting data types...
+2025-03-06 20:40:32,518 - INFO - Handling outliers...
+2025-03-06 20:40:32,526 - INFO - Standardizing and encoding features...
+2025-03-06 20:40:32,625 - INFO - Extracting features...
+2025-03-06 20:40:32,663 - INFO - Validating and saving cleaned datasets...
+2025-03-06 20:40:32,668 - INFO - Missing values in movies dataset: 3513
+2025-03-06 20:40:32,822 - INFO - Saved cleaned movies dataset to ../processed/cleaned_movies.csv
+2025-03-06 20:40:32,824 - INFO - Missing values in ratings dataset: 0
+2025-03-06 20:40:33,511 - INFO - Saved cleaned ratings dataset to ../processed/cleaned_ratings.csv
+2025-03-06 20:40:33,514 - INFO - Missing values in tags dataset: 0
+2025-03-06 20:40:33,533 - INFO - Saved cleaned tags dataset to ../processed/cleaned_tags.csv
+2025-03-06 20:40:33,534 - INFO - Missing values in links dataset: 0
+2025-03-06 20:40:33,548 - INFO - Saved cleaned links dataset to ../processed/cleaned_links.csv
+2025-03-06 20:40:33,548 - INFO - Combining all datasets into a single file...
+2025-03-06 20:40:33,842 - INFO - Saved combined dataset to ../processed/combined_movie_data.csv
+2025-03-06 20:40:33,842 - INFO - Combined dataset shape: (9742, 42)
+2025-03-06 20:40:33,842 - INFO - Number of features: 42
+2025-03-06 20:40:33,842 - INFO - Features included: movieId, title, genres, genre_Adventure, genre_Animation, genre_Children, genre_Comedy, genre_Fantasy, genre_Romance, genre_Drama, genre_Action, genre_Crime, genre_Thriller, genre_Horror, genre_Mystery, genre_Sci-Fi, genre_War, genre_Musical, genre_Documentary, genre_IMAX, genre_Western, genre_Film-Noir, genre_(no genres listed), release_year, rating_count, average_rating, rating_std_x, total_ratings, avg_rating, rating_std_y, min_rating, max_rating, avg_normalized_rating, normalized_rating_std, first_rating_year, last_rating_year, all_tags, num_unique_tags, imdbId, tmdbId, has_tags, rating_popularity
+2025-03-06 20:40:33,842 - INFO - Data cleaning pipeline completed successfully!
