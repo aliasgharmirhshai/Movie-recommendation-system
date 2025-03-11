@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 * linguist-language=Python 
+=======
+* linguist-language=Python 
+>>>>>>> 6151489 (🔥 feat: Implement basic FastAPI service and update project structure)
