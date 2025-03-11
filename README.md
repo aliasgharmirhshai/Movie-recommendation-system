@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# 🚀 Hybrid Movie Recommendation System
-=======
 # 🚀 Movie Recommendation System
->>>>>>> 6151489 (🔥 feat: Implement basic FastAPI service and update project structure)
 
 ---
 
