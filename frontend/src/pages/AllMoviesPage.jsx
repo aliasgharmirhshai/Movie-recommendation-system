@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { getAllMovies } from '../services/api';
 import MovieList from '../components/MovieList';
 
-const AllMoviesPage = () => {
+const AllMoviesPage = ({ searchTerm }) => {
   console.log('AllMoviesPage rendering...'); // Debug log
 
   const [movies, setMovies] = useState([]);
@@ -41,8 +41,14 @@ const AllMoviesPage = () => {
 
   const indexOfLastMovie = currentPage * moviesPerPage;
   const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
-  const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
-  const totalPages = Math.ceil(movies.length / moviesPerPage);
+
+  // Filter movies based on the search term
+  const filteredMovies = movies.filter(movie =>
+    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const currentMovies = filteredMovies.slice(indexOfFirstMovie, indexOfLastMovie);
+  const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
 
   if (loading) {
     return (
