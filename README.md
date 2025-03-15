@@ -1,68 +1,64 @@
 # 🚀 Movie Recommendation System
 
----
+A FastAPI-powered movie recommendation system that uses KNN and content-based filtering to suggest movies. It leverages TF-IDF, Word2Vec, and multiple features like genre similarity, tags, Bayesian average rating, rating recency, popularity, and release year for precise recommendations. Built with Python, FastAPI, Scikit-learn, Pandas, and Uvicorn.
 
-## 📂 Project File Structure
 
-```
-movie-recommendation-system/
-│── backend/                     # Backend (API + ML models)
-│   │── models/                   # ML models (CBF, CF, Hybrid)
-│   │   │── content_based.py       # Content-Based Filtering (k-NN)
-│   │   │── collaborative.py       # Collaborative Filtering (SVD, kNN)
-│   │   │── hybrid.py              # Hybrid Recommendation Model
-│   │   └── deep_learning.py       # Deep Learning-Based Model (Autoencoders, Transformers)
-│   │── data/                      # Preprocessed & Raw Data
-│   │   │── raw/                    # Original CSV files
-│   │   │── processed/              # Preprocessed & cleaned data
-│   │   └── database.db             # SQLite/PostgreSQL database file (if applicable)
-│   │── services/                   # API Business Logic
-│   │   │── recommender.py          # Core Recommendation Logic
-│   │   │── user_service.py         # User profile & interactions
-│   │   └── rating_service.py       # Handles user ratings & feedback
-│   │── api/                        # REST API with Flask/FastAPI
-│   │   │── routes/                 # API Routes
-│   │   │   │── recommend.py        # Recommendation API (GET /recommend)
-│   │   │   │── user.py             # User API (POST /rate, GET /profile)
-│   │   │   └── health.py           # Health check endpoint
-│   │   │── main.py                 # Main API Entry Point
-│   │   └── config.py               # Configuration settings (API keys, DB config)
-│   │── utils/                      # Helper Functions
-│   │   │── preprocess.py           # Data cleaning & feature extraction
-│   │   │── metrics.py              # Model evaluation metrics
-│   │   └── logger.py               # Logging utility
-│   └── requirements.txt            # Backend dependencies
-│
-│── frontend/                     # Web/Mobile UI
-│   │── src/
-│   │   │── components/             # Reusable UI Components
-│   │   │── pages/                  # Page layouts (Home, Movie Details)
-│   │   │── services/               # API Calls to Backend
-│   │   │── App.js                  # Main React App
-│   │   └── index.js                # Entry point
-│   │── public/                     # Static assets
-│   └── package.json                # Frontend dependencies
-│
-│── deployment/                   # Deployment Configs
-│   │── docker/                     # Docker & Containerization
-│   │   │── Dockerfile              # Backend Dockerfile
-│   │   │── docker-compose.yml      # Container Orchestration
-│   │── k8s/                        # Kubernetes Deployment
-│   │── nginx/                      # Reverse Proxy Configuration
-│   └── cloud/                      # Cloud Infrastructure (AWS/GCP/Terraform)
-│
-│── tests/                        # Unit & Integration Tests
-│   │── test_api.py                 # API Testing (pytest)
-│   │── test_models.py              # Model Testing
-│   └── test_endpoints.py           # End-to-End API Tests
-│
-│── notebooks/                    # Jupyter Notebooks for Experimentation
-│   │── EDA.ipynb                   # Exploratory Data Analysis
-│   │── model_training.ipynb        # ML Model Training
-│   └── hybrid_experiments.ipynb    # Hybrid model testing
-│
-│── README.md                     # Project Documentation
-│── .env                           # Environment Variables
-└── .gitignore                     # Ignore unnecessary files
+## 🚀 Getting Started
 
-```
+### Prerequisites
+
+- Python 3.8+
+- FastAPI
+- Uvicorn
+- Pandas
+- Scikit-learn
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/movie-recommendation-system.git
+    cd movie-recommendation-system
+    ```
+
+2. Create a virtual environment and activate it:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+### Running the Application
+
+1. Start the FastAPI server:
+    ```bash
+    uvicorn app.main:app --reload
+    ```
+
+2. The API will be available at `http://127.0.0.1:8000`.
+
+### API Endpoints
+
+- **Get API status**: `GET /movies/`
+- **List all movies**: `GET /movies/all`
+- **Get movie by index**: `GET /movies/{index}`
+- **Get movie recommendations**: `GET /movies/{index}/recommend`
+
+### Project Structure
+
+- **app/models**: Contains the machine learning models for content-based filtering, collaborative filtering, hybrid recommendation, and deep learning-based models.
+- **app/data**: Contains raw and processed data files.
+- **app/services**: Contains the core business logic for recommendations, user services, and rating services.
+- **app/routers**: Contains the API route definitions.
+- **app/main.py**: The main entry point for the FastAPI application.
+- **tests**: Contains unit and integration tests.
+- **notebooks**: Contains Jupyter notebooks for data analysis and model training.
+
+### Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+

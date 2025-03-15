@@ -10,9 +10,9 @@ const MovieList = ({ movies, onRecommend }) => {
     <div className="space-y-4 max-w-4xl mx-auto">
       {movies.map((movie, index) => (
         <MovieCard
-          key={index}
+          key={movie.id || index}
           title={movie.title}
-          onRecommend={() => onRecommend(index)}
+          onRecommend={() => onRecommend(movie.id || index)}
         />
       ))}
     </div>

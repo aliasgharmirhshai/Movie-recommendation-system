@@ -61,6 +61,11 @@ const AllMoviesPage = ({ searchTerm }) => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-8 text-center">Movie List</h2>
+      {searchTerm && (
+        <p className="text-center text-lg mb-4">
+          Results for searching "{searchTerm}"
+        </p>
+      )}
       <MovieList movies={currentMovies} onRecommend={handleGetRecommendations} />
       
       {/* Pagination Controls */}

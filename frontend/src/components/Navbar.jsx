@@ -10,6 +10,7 @@ const Navbar = ({ onSearch }) => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
+    console.log('Search term submitted:', searchTerm);
     onSearch(searchTerm);
   };
 
