@@ -16,22 +16,58 @@ A FastAPI-powered movie recommendation system that uses KNN and content-based fi
     git clone https://github.com/yourusername/movie-recommendation-system.git
     cd movie-recommendation-system
     ```
+    ### Running the Application
 
-### Running the Application with Docker
+    #### Without Docker (Using Virtual Environment)
 
-1. Build and start the Docker containers:
-    ```bash
-    docker-compose up --build
-    ```
+    1. Create and activate a virtual environment:
+        ```bash
+        python3 -m venv venv
+        source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+        ```
 
-2. The API will be available at `http://127.0.0.1:8000`.
+    2. Install the required dependencies:
+        ```bash
+        pip install -r requirements.txt
+        ```
+
+    3. Start the FastAPI application:
+        ```bash
+        uvicorn app.main:app --reload
+        ```
+
+    4. The API will be available at `http://127.0.0.1:8000`.
+
+    #### Running the Application with Docker
+
+    1. Build and start the Docker containers:
+        ```bash
+        docker-compose up --build
+        ```
+
+    2. The API will be available at `http://127.0.0.1:8000`.
 
 ### API Endpoints
 
 - **Get API status**: `GET /movies/`
+    ```bash
+    curl -X GET "http://127.0.0.1:8000/movies/"
+    ```
+
 - **List all movies**: `GET /movies/all`
+    ```bash
+    curl -X GET "http://127.0.0.1:8000/movies/all"
+    ```
+
 - **Get movie by index**: `GET /movies/{index}`
+    ```bash
+    curl -X GET "http://127.0.0.1:8000/movies/1"
+    ```
+
 - **Get movie recommendations**: `GET /movies/{index}/recommend`
+    ```bash
+    curl -X GET "http://127.0.0.1:8000/movies/1/recommend"
+    ```
 
 ### Project Structure
 
