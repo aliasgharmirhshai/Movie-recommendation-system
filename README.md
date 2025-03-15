@@ -2,16 +2,12 @@
 
 A FastAPI-powered movie recommendation system that uses KNN and content-based filtering to suggest movies. It leverages TF-IDF, Word2Vec, and multiple features like genre similarity, tags, Bayesian average rating, rating recency, popularity, and release year for precise recommendations. Built with Python, FastAPI, Scikit-learn, Pandas, and Uvicorn.
 
-
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Python 3.8+
-- FastAPI
-- Uvicorn
-- Pandas
-- Scikit-learn
+- Docker
+- Docker Compose
 
 ### Installation
 
@@ -21,22 +17,11 @@ A FastAPI-powered movie recommendation system that uses KNN and content-based fi
     cd movie-recommendation-system
     ```
 
-2. Create a virtual environment and activate it:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
+### Running the Application with Docker
 
-3. Install the required dependencies:
+1. Build and start the Docker containers:
     ```bash
-    pip install -r requirements.txt
-    ```
-
-### Running the Application
-
-1. Start the FastAPI server:
-    ```bash
-    uvicorn app.main:app --reload
+    docker-compose up --build
     ```
 
 2. The API will be available at `http://127.0.0.1:8000`.
